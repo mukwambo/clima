@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:clima/utilities/constants.dart';
 
 class LocationScreen extends StatefulWidget {
-  const LocationScreen({super.key});
+  const LocationScreen({super.key, required this.locationWeather});
+  final dynamic locationWeather;
 
   @override
   State<LocationScreen> createState() => _LocationScreenState();
@@ -15,7 +16,7 @@ class _LocationScreenState extends State<LocationScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: const AssetImage('images/location_background.jpg'),
+            image: const AssetImage('assets/images/location_background.jpg'),
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
                 Colors.white.withOpacity(0.8), BlendMode.dstATop),
@@ -76,3 +77,7 @@ class _LocationScreenState extends State<LocationScreen> {
     );
   }
 }
+
+// var theTemperature = decodedWeatherData['main']['temp'];
+// var theConditionNumber = decodedWeatherData['weather'][0]['id'];
+// String cityName = decodedWeatherData['name'];
