@@ -1,9 +1,15 @@
+import 'package:clima/services/weather.dart';
+import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:clima/screens/loading_screen.dart';
+import 'package:flutter/material.dart';
+import '../screens/location_screen.dart';
 
 /// Determine the current position of the device.
 ///
 /// When the location services are not enabled or permissions
 /// are denied the `Future` will return an error.
+LoadingScreen? loadingScreen;
 Future<Position> _determinePosition() async {
   bool serviceEnabled;
   LocationPermission permission;
@@ -27,7 +33,7 @@ Future<Position> _determinePosition() async {
       // returned true. According to Android guidelines
       // your App should show an explanatory UI now.
       return Future.error('Location permissions are denied');
-    }
+    } else {}
   }
 
   if (permission == LocationPermission.deniedForever) {
