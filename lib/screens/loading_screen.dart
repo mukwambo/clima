@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'location_screen.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:clima/services/location_permission.dart';
 import 'package:clima/services/weather.dart';
 
 class LoadingScreen extends StatefulWidget {
@@ -29,7 +28,6 @@ class _LoadingScreenState extends State<LoadingScreen> {
   @override
   void initState() {
     super.initState();
-    checkLocationPermission();
     getLocationData();
   }
 

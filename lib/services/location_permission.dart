@@ -1,9 +1,5 @@
-import 'package:clima/services/weather.dart';
-import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:clima/screens/loading_screen.dart';
-import 'package:flutter/material.dart';
-import '../screens/location_screen.dart';
 
 /// Determine the current position of the device.
 ///
